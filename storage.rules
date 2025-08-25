@@ -1,0 +1,25 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Images folder for testimonials or gallery
+    match /images/{allPaths=**} {
+      allow read: if true; // Anyone can view images
+      allow write: if false; // Only admin can upload images
+    }
+
+    // Documents folder for form attachments
+    match /documents/{userId}/{fileName} {
+      allow read: if false; // Private documents
+      allow create: if request.resource.size < 10 * 1024 * 1024 // 10MB max
+                   && (request.resource.contentType.matches('application/pdf') 
+                   || request.resource.contentType.matches('image/.*')); // Only PDFs and images
+      allow update, delete: if false;
+    }
+
+    // Default deny all
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+} 

@@ -1,0 +1,76 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Cinema Noir is hands down one of the best production catering teams I've worked with. The food is always amazing—diverse, flavorful, and truly pleasing to the palate. From fresh-pressed juices to breakfast spreads that always hit, they consistently deliver top-tier meals that keep cast and crew energized. Sean, the owner, is incredibly production-friendly—transparent, flexible, and able to work within a budget while still exceeding expectations. It's rare to find a catering company that combines culinary excellence with such a deep understanding of the demands of set life. Noir Cinema Catering is a gem.",
+      "author": "Chloe Benard",
+      "role": "Producer / Production Supervisor",
+      "company": "",
+      "rating": 5,
+      "highlight": "Culinary excellence meets production expertise"
+    },
+    {
+      "id": 2,
+      "quote": "NOIR Cinema Catering has been our go-to for every production in Atlanta. Their reliability and quality are unmatched.",
+      "author": "Production Manager",
+      "role": "Production Manager",
+      "company": "Major Studio",
+      "rating": 5,
+      "highlight": "Unmatched reliability and quality"
+    },
+    {
+      "id": 3,
+      "quote": "The crew loves the variety and quality of food. NOIR always delivers, no matter how challenging the location or schedule.",
+      "author": "Line Producer",
+      "role": "Line Producer",
+      "company": "Independent Film",
+      "rating": 5,
+      "highlight": "Consistent quality in any location"
+    },
+    {
+      "id": 4,
+      "quote": "Professional, punctual, and the food is fantastic. They understand the unique needs of film production.",
+      "author": "Director",
+      "role": "Director",
+      "company": "TV Series",
+      "rating": 5,
+      "highlight": "Professional service that understands film production"
+    },
+    {
+      "id": 5,
+      "quote": "We've worked with many caterers, but NOIR stands out for their attention to detail and flexibility with last-minute changes.",
+      "author": "Unit Production Manager",
+      "role": "Unit Production Manager",
+      "company": "Feature Film",
+      "rating": 5,
+      "highlight": "Excellent attention to detail and flexibility"
+    },
+    {
+      "id": 6,
+      "quote": "The food is always fresh, delicious, and presented beautifully. Our cast and crew look forward to meal times!",
+      "author": "Assistant Director",
+      "role": "Assistant Director",
+      "company": "Streaming Series",
+      "rating": 5,
+      "highlight": "Beautifully presented, delicious meals"
+    },
+    {
+      "id": 7,
+      "quote": "Noir Cinema Catering provides Michelin Star dining on your set, with Sean delivering fine dining experiences for your cast and crew. Noir offers delicious and diverse menus that cater to our set's dietary needs while staying within budget. Despite our frequently changing schedule, Noir Catering was able to adapt quickly, maintaining a professional and pleasant demeanor throughout.",
+      "author": "Montez Monroe",
+      "role": "Producer",
+      "company": "",
+      "rating": 5,
+      "highlight": "Michelin Star dining on set with budget flexibility"
+    },
+    {
+      "id": 8,
+      "quote": "Noir Cinema Catering is always my go-to for film production catering. Sean Carroll has curated a team of true professionals who understand the unique needs, budgets, and variety required to satisfy hundreds of people on a daily basis. I will forever be a fan and a client.",
+      "author": "Dianne Ashford",
+      "role": "Producer",
+      "company": "",
+      "rating": 5,
+      "highlight": "Trusted by producers for large-scale productions"
+    }
+  ]
+}

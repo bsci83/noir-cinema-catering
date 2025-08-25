@@ -1,0 +1,21 @@
+import React from 'react';
+import Gallery from '../components/Gallery';
+
+const GalleryPage = () => {
+  return (
+    <div className="pt-20">
+      <div className="bg-gradient-to-r from-black to-gray-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold mb-6">Gallery</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Take a behind-the-scenes look at our professional catering operations, 
+          from our state-of-the-art mobile kitchen to the exceptional meals we create for film productions.
+          </p>
+        </div>
+      </div>
+      <Gallery />
+    </div>
+  );
+};
+
+export default GalleryPage;
