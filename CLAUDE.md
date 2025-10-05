@@ -3,11 +3,25 @@
 ## Project Overview
 This directory serves as the main hub for multiple web development projects, including the White-Label platform and connections to the SageAAA agency website. The goal is to create a scalable SaaS platform for managing multiple client websites.
 
-## Current Session Status (Last Updated: 2025-08-20)
+## Current Session Status (Last Updated: 2025-01-05)
 
-### ✅ Today's Completed Tasks
+### ✅ Latest Session Completed Tasks (January 5, 2025)
+1. **Updated Services page** - Changed "Craft Services" to "Drop Catering" with new description
+2. **Configured Resend API** - Added API key to local environment for testing
+3. **Updated email recipients** - Form now sends to christina@cinema-catering.com and chef.sean.noir@gmail.com
+4. **Removed recipient** - Removed Christina@galacateringservice.com from email list
+5. **Deployed all changes** - All updates pushed to GitHub and auto-deployed to Vercel
+
+### ✅ Previous Session Tasks (October 2, 2025)
+1. **Added new testimonial** - Mike Clark (Production Supervisor, Eagle Rock Studios Atlanta)
+2. **Integrated Resend for contact form emails** - Professional email delivery service
+3. **Created Vercel serverless API endpoint** - `/api/send-quote.ts` for handling form submissions
+4. **Updated Contact component** - Now sends emails directly instead of mailto links
+5. **Created setup documentation** - `RESEND_SETUP.md` with complete client instructions
+
+### ✅ Previous Session Tasks (August 20, 2025)
 1. **Analyzed sageaaa.com** - Site is live and working
-2. **Compared project folders** - SageAAA vs Sage.AAA 
+2. **Compared project folders** - SageAAA vs Sage.AAA
 3. **Evaluated visual editor** - Found it's prototype-level, not production-ready
 4. **Assessed landing page code** - Professional quality with animations
 5. **Defined business model** - Vertical SaaS with industry packages
@@ -74,12 +88,29 @@ One Codebase → Multiple Industries → Recurring Revenue
 
 ## Technical Architecture
 
-### Current Stack (SageAAA)
-- **Frontend**: React + TypeScript + Tailwind
-- **Backend**: Express + Firebase
-- **Database**: Firestore
-- **Auth**: Firebase Auth
-- **Hosting**: TBD (Vercel/Netlify recommended)
+### Current Stack (NOIR Cinema Catering Website)
+- **Frontend**: React + TypeScript + Tailwind CSS + Vite
+- **Email Service**: Resend (via Vercel serverless functions)
+- **Hosting**: Vercel
+- **Components**: Radix UI + Lucide React icons
+- **Routing**: React Router v6
+- **Form Handling**: Custom hooks + fetch API
+
+### Email Integration Details
+- **Service**: Resend.com
+- **API Endpoint**: `/api/send-quote.ts` (Vercel serverless function)
+- **Pricing**: Free tier (3,000 emails/month, 100/day)
+- **Recipients**: 
+  - christina@cinema-catering.com
+  - chef.sean.noir@gmail.com
+- **API Key**: Configured in Vercel environment variables (RESEND_API_KEY)
+- **Features**:
+  - Direct email delivery (no mailto links)
+  - Formatted HTML emails
+  - Reply-To set to customer email
+  - Error handling and loading states
+  - Success confirmation messages
+  - Multiple recipient support
 
 ### Multi-Tenant Architecture
 ```typescript
@@ -193,6 +224,16 @@ cd "/mnt/c/Users/bifil/OneDrive/Desktop/AppLand/noir/noir-cinema-catering/White-
 
 ## Important Files
 
+### NOIR Cinema Catering Key Files
+- `/src/components/Contact.tsx` - Contact form with Resend integration
+- `/src/components/Services.tsx` - Services page with Drop Catering, Location Catering, Corporate Events, Mobile Kitchen
+- `/src/components/Testimonials.tsx` - Customer testimonials carousel (5 testimonials)
+- `/api/send-quote.ts` - Vercel serverless function for email sending (sends to multiple recipients)
+- `/RESEND_SETUP.md` - Complete setup guide for client
+- `/package.json` - Dependencies including Resend
+- `.env.local` - Local environment variables (for testing only)
+- `.env` (Vercel) - Environment variables (RESEND_API_KEY configured in Vercel dashboard)
+
 ### SageAAA Key Files
 - `/client/src/lib/firebase.ts` - Firebase configuration
 - `/client/src/pages/Home.tsx` - Landing page
@@ -230,6 +271,20 @@ This project combines multiple codebases to create a scalable SaaS platform. The
 
 ## Session Notes
 
+### January 5, 2025 Session
+- **Services Update**: Changed "Craft Services" to "Drop Catering" - targeting smaller, budget-minded productions and production offices
+- **Email Recipients**: Updated to send to christina@cinema-catering.com and chef.sean.noir@gmail.com
+- **Resend API Key**: Configured in Vercel environment variables for secure email delivery
+- **Deployment**: All changes pushed to GitHub and auto-deployed via Vercel
+
+### October 2, 2025 Session
+- **Testimonials**: 5 total testimonials in carousel (Dianne Ashford, Montez Monroe, Chloe Benard, Carl Seaton, Mike Clark)
+- **Email Integration**: Migrated from mailto links to Resend API for professional email delivery
+- **No Auth Required**: Public marketing website - no authentication needed for contact forms
+- **Deployment**: Site deployed on Vercel with serverless functions
+- **Client Action Required**: Must add RESEND_API_KEY environment variable to Vercel
+
+### Previous Session Notes
 **Playwright MCP**: Installed in White-Label but not needed for core functionality
 
 **Firebase Project**: sage-aaa (already configured in SageAAA)
