@@ -1,12 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Clock, Users, Truck, Coffee, Utensils, ShieldCheck } from 'lucide-react';
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <Coffee className="h-8 w-8" />,
-      title: "Craft Services",
-      description: "24/7 snack stations, coffee service, and quick bites to keep your crew energized throughout long shooting days.",
+      title: "Drop Catering",
+      description: "Drop catering available for smaller productions, budget minded productions, and production offices.",
       features: ["Fresh coffee & beverages", "Healthy snack options", "Quick grab-and-go items", "Custom dietary accommodations"]
     },
     {
@@ -113,22 +115,22 @@ const Services = () => {
         {/* Service Areas */}
         <div className="mt-16 text-center">
           <h3 className="text-3xl font-bold text-white mb-6">Service Areas</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Decatur', 'Duluth', 'Buckhead'].map((city) => (
-              <div key={city} className="bg-black/50 rounded-lg p-4 border border-gray-800">
+          <div className="flex justify-center gap-4 max-w-4xl mx-auto">
+            {['Atlanta Metro', 'State Wide', 'Nation Wide'].map((city) => (
+              <div key={city} className="bg-black/50 rounded-lg px-6 py-4 border border-gray-800">
                 <span className="text-white font-semibold">{city}</span>
               </div>
             ))}
           </div>
           <p className="text-gray-400 mt-6">
-            Currently Providing service in all of Georgia. Available to travel outside of the state of Georgia
+            Currently Providing service in all of Georgia. Available to travel outside the state of Georgia
           </p>
         </div>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/contact')}
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg"
           >
             Get Your Custom Quote
