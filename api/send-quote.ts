@@ -70,9 +70,14 @@ export default async function handler(
     `;
 
     // Send email via Resend
+    // Add multiple recipients here - you can add more email addresses to this array
     const data = await resend.emails.send({
       from: 'NOIR Cinema Catering <onboarding@resend.dev>',
-      to: ['christina@cinema-catering.com'],
+      to: [
+        'christina@cinema-catering.com',
+        'Christina@galacateringservice.com'
+        // Add more recipients here as needed, separated by commas
+      ],
       replyTo: email,
       subject: `Quote Request - ${projectType} - ${eventDate}`,
       html: emailHtml,
