@@ -75,7 +75,6 @@ export default async function handler(
       from: 'NOIR Cinema Catering <onboarding@resend.dev>',
       to: [
         'christina@cinema-catering.com',
-        'Christina@galacateringservice.com',
         'chef.sean.noir@gmail.com'
         // Add more recipients here as needed, separated by commas
       ],
